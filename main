@@ -13,6 +13,11 @@ TRUE  "Proxy Comum/Autenticada" \
 FALSE "Remover Configurações do Proxy"
 )
 
+### Button Cancel now work - Check Others!
+if [ $? = 1 ]; then
+    exit 1
+fi
+
 if [ "$escolha" == "Nenhuma" ] || [ "$escolha" == "Proxy Comum/Autenticada" ]; then
 	itens=$(
 	zenity --list --checklist --title="Proxy-Linux" \
